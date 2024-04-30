@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jelkovec_flutter_app/AktivnostiTrziste.dart';
 import 'package:jelkovec_flutter_app/IzracunBodova.dart';
-import 'package:jelkovec_flutter_app/SkolaInfo.dart';
 import 'package:jelkovec_flutter_app/imageItem.dart';
 import 'package:jelkovec_flutter_app/Home.dart';
 import 'package:jelkovec_flutter_app/Izvannastavne.dart';
