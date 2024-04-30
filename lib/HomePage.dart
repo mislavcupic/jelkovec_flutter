@@ -9,26 +9,6 @@ import 'package:jelkovec_flutter_app/Izvannastavne.dart';
 
 var photo = ImageItem("android/assets/images/jelkovec.png", "O školi", "Saznaj više o našoj školi...");
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/homepage',
-      routes: {
-        "/homepage": (context) => HomePage(),
-        '/home': (context) => Home(), // Define a route for the new screen
-        '/izracunbodovi': (context) => IzracunBodova(),
-        'o_skoli': (context) => SkolaInfo(),
-        'aktivnostitrziste':(context) => AktivnostiTrziste()
-      },
-      home: HomePage(),
-    );
-  }
-}
-
 
 
 class HomePage extends StatelessWidget {
