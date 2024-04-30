@@ -4,7 +4,7 @@ import 'package:jelkovec_flutter_app/IzracunBodova.dart';
 import 'package:jelkovec_flutter_app/SkolaInfo.dart';
 import 'package:jelkovec_flutter_app/HomePage.dart';
 import 'package:jelkovec_flutter_app/Home.dart';
-import 'package:jelkovec_flutter_app/Izvannastavne.dart';
+
 
 
 void main() => runApp(MyApp());
