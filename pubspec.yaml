@@ -40,6 +40,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   carousel_slider: ^4.0.0
+  permission_handler: ^10.0.0
+  http: ^0.13.3
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -48,6 +50,7 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   url_launcher: ^6.2.6  # Ovo je verzija url_launcher paketa
   test: ^1.24.9
+  webview_flutter: ^2.0.10
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

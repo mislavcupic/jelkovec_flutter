@@ -32,7 +32,7 @@ class Anketa extends StatelessWidget {
 
     final Uri url = Uri.parse('https://forms.gle/ug12UameyJkfzZEf6');
 
-      await launchUrl(url);
+    await launchUrl(url);
 
 
 
