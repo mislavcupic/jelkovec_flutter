@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class PrvaPomoc extends StatelessWidget {
+  const PrvaPomoc({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prva pomoć u SŠJ'),
+        title: const Text('Prva pomoć u SŠJ'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -14,9 +16,9 @@ class PrvaPomoc extends StatelessWidget {
             'android/assets/images/firstaid.jpg',
             fit: BoxFit.cover,
           ),
-          Expanded(
+          const Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Tekst za prvu pomoć ',
                 style: TextStyle(fontSize: 16),

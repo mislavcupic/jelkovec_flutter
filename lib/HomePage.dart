@@ -11,6 +11,8 @@ var photo = ImageItem("android/assets/images/jelkovec.png", "O školi", "Saznaj 
 
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class HomePage extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
               child: Image.asset(
@@ -43,12 +45,12 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => IzracunBodova(),
+                    builder: (context) => const IzracunBodova(),
                   ),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(20),
@@ -65,8 +67,8 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between image and other widgets in Row
-                    Text(
+                    const SizedBox(width: 10), // Add some space between image and other widgets in Row
+                    const Text(
                       'Izračunaj bodove',
                       style: TextStyle(fontSize: 22),
                     ),
@@ -86,12 +88,12 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Home(),
+                    builder: (context) => const Home(),
                   ),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.yellow.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(20),
@@ -107,8 +109,8 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between image and other widgets in Row
-                    Text(
+                    const SizedBox(width: 10), // Add some space between image and other widgets in Row
+                    const Text(
                       'Aktivnosti u školi',
                       style: TextStyle(fontSize: 20),
                     ),
@@ -127,12 +129,12 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Izvannastavne(),
+                    builder: (context) => const Izvannastavne(),
                   ),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.orange.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(20),
@@ -148,8 +150,8 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between image and other widgets in Row
-                    Text(
+                    const SizedBox(width: 10), // Add some space between image and other widgets in Row
+                    const Text(
                       'Izvannastavne aktivnosti',
                       style: TextStyle(fontSize: 18),
                     ),
@@ -168,12 +170,12 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AktivnostiTrziste(),
+                    builder: (context) =>  AktivnostiTrziste(),
                   ),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.red.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(20),
@@ -189,8 +191,8 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 10), // Add some space between image and other widgets in Row
-                    Text(
+                    const SizedBox(width: 10), // Add some space between image and other widgets in Row
+                    const Text(
                       'Dosegni izvrsnost!',
                       style: TextStyle(fontSize: 22),
                     ),
@@ -211,7 +213,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Home(),
+                    builder: (context) => const Home(),
                   ),
                 );
               },

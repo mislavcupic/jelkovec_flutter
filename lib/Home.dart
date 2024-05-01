@@ -7,14 +7,13 @@ import 'package:jelkovec_flutter_app/Drustveni.dart';
 import 'package:jelkovec_flutter_app/Electric.dart';
 import 'package:jelkovec_flutter_app/Anketa.dart';
 
-import 'package:flutter/material.dart';
 
 class ActivityCard extends StatelessWidget {
   final String imagePath;
   final String text;
   final String route;
 
-  ActivityCard({
+  const ActivityCard({super.key, 
     required this.imagePath,
     required this.text,
     required this.route,
@@ -28,11 +27,11 @@ class ActivityCard extends StatelessWidget {
       },
       child: Container(
         width: 150,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black12,
               offset: Offset(0, 2),
@@ -52,11 +51,11 @@ class ActivityCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 14),
             ),
           ],
         ),
@@ -66,17 +65,19 @@ class ActivityCard extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
+  const Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/prirodoslovni': (context) => Prirodoslovni(),
-        '/o_skoli': (context) => SkolaInfo(),
-        '/jezici': (context) => Jezici(),
-        '/drustveni': (context) => Drustveni(),
-        '/electric': (context) => Electric(),
-        '/anketa': (context) => Anketa(),
+        '/prirodoslovni': (context) => const Prirodoslovni(),
+        '/o_skoli': (context) => const SkolaInfo(),
+        '/jezici': (context) => const Jezici(),
+        '/drustveni': (context) => const Drustveni(),
+        '/electric': (context) => const Electric(),
+        '/anketa': (context) => const Anketa(),
       },
       initialRoute: '/home',
       home: Scaffold(
@@ -84,15 +85,15 @@ class Home extends StatelessWidget {
           centerTitle: true,
           title: const Text("Školske aktivnosti"),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.of(context).pop();
             },
           ),
         ),
         body: Container(
-          padding: EdgeInsets.all(20.0),
-          child: Wrap(
+          padding: const EdgeInsets.all(20.0),
+          child: const Wrap(
             alignment: WrapAlignment.spaceAround,
             children: [
               ActivityCard(

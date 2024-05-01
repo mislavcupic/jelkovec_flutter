@@ -6,7 +6,7 @@ void main() {
   group('IzracunBodova', () {
     testWidgets('Initial widget test', (WidgetTester tester) async {
       // Build our app and trigger a frame.
-      await tester.pumpWidget(MaterialApp(home: IzracunBodova()));
+      await tester.pumpWidget(const MaterialApp(home: IzracunBodova()));
 
       // Verify that AppBar title is correct
       expect(find.text('Izračunaj svoje bodove'), findsOneWidget);
@@ -21,7 +21,7 @@ void main() {
     });
 
     testWidgets('Selecting smjer', (WidgetTester tester) async {
-      await tester.pumpWidget(MaterialApp(home: IzracunBodova()));
+      await tester.pumpWidget(const MaterialApp(home: IzracunBodova()));
 
       // Tap on radio button to select smjer
       await tester.tap(find.text('Tehničar za elektroniku'));
@@ -32,7 +32,7 @@ void main() {
     });
 
     testWidgets('Calculate button with empty input fields', (WidgetTester tester) async {
-      await tester.pumpWidget(MaterialApp(home: IzracunBodova()));
+      await tester.pumpWidget(const MaterialApp(home: IzracunBodova()));
 
       // Tap on calculate button with empty input fields
       await tester.tap(find.text('Izračunaj'));
@@ -43,7 +43,7 @@ void main() {
     });
 
     testWidgets('Calculate button with filled input fields', (WidgetTester tester) async {
-      await tester.pumpWidget(MaterialApp(home: IzracunBodova()));
+      await tester.pumpWidget(const MaterialApp(home: IzracunBodova()));
 
       // Fill input fields with values
       await tester.enterText(find.text('Opći uspjeh 5. razred'), '4');

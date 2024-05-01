@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class AktivnostiTrziste extends StatelessWidget {
-  final List<String> imagePaths = [
+   List<String> imagePaths = [
     'android/assets/images/programming.jpg',
     'android/assets/images/people.jpg',
     'android/assets/images/jelkovec3.jpg',
@@ -13,11 +13,13 @@ class AktivnostiTrziste extends StatelessWidget {
     'android/assets/images/jelkovec8.jpg',
   ];
 
+   AktivnostiTrziste({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dosegni izvrsnost!'),
+        title: const Text('Dosegni izvrsnost!'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -30,7 +32,7 @@ class AktivnostiTrziste extends StatelessWidget {
               aspectRatio: 16 / 9,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 1700),
+              autoPlayAnimationDuration: const Duration(milliseconds: 1700),
               viewportFraction: 0.8,
             ),
             items: imagePaths.map((String imagePath) {
@@ -44,9 +46,9 @@ class AktivnostiTrziste extends StatelessWidget {
               );
             }).toList(),
           ),
-          Expanded(
+          const Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Upoznaj svijet programiranja, web dizajna, elektrotehnike i robotike. Ovdje ćeš steći osnovna i napredna znanja koja će ti pomoći da razvijaš jednostavnije, kao i kompleksnije i zahtjevnije koncepte iz navedenih područja. Srednja škola Jelkovec nudi ti širok izbor mogućnosti. ',
                 style: TextStyle(fontSize: 20),

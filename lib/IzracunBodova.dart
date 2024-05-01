@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class IzracunBodova extends StatefulWidget {
+  const IzracunBodova({super.key});
+
   // Unutar klase _IzracunBodovaState
 
 
@@ -54,7 +56,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Izračunaj svoje bodove'),
+        title: const Text('Izračunaj svoje bodove'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -64,7 +66,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
             children: [
               // Radio buttons for selecting smjer
               RadioListTile(
-                title: Text('Elektrotehničar'),
+                title: const Text('Elektrotehničar'),
                 value: 'Elektrotehničar',
                 groupValue: selectedSmjer,
                 onChanged: (value) {
@@ -74,7 +76,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                 },
               ),
               RadioListTile(
-                title: Text('Tehničar za elektroniku'),
+                title: const Text('Tehničar za elektroniku'),
                 value: 'Tehničar za elektroniku',
                 groupValue: selectedSmjer,
                 onChanged: (value) {
@@ -84,7 +86,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                 },
               ),
               RadioListTile(
-                title: Text('Tehničar za računalstvo'),
+                title: const Text('Tehničar za računalstvo'),
                 value: 'Tehničar za računalstvo',
                 groupValue: selectedSmjer,
                 onChanged: (value) {
@@ -93,7 +95,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                   });
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Text inputs for various subjects
               _buildTextInput('Opći uspjeh 5. razred', opciUspjeh5.toString(), (newValue) {
                 setState(() {
@@ -176,7 +178,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                 });
               }),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Button to calculate
               ElevatedButton(
                 onPressed: () async {
@@ -201,15 +203,15 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: Text('Upozorenje'),
-                        content: Text('Molimo ispunite sva polja prije izračuna bodova.'),
+                        title: const Text('Upozorenje'),
+                        content: const Text('Molimo ispunite sva polja prije izračuna bodova.'),
                         actions: [
                           TextButton(
                             onPressed: () {
                               print(ukupnoBodova);
                               Navigator.pop(context);
                             },
-                            child: Text('OK'),
+                            child: const Text('OK'),
                           ),
                         ],
                       ),
@@ -244,14 +246,14 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                            title: Text('Čestitamo! Procijenjeni broj bodova je ${ukupnoBodova}'),
-                            content: Text('Imate velike šanse za upis našeg smjera.'),
+                            title: Text('Čestitamo! Procijenjeni broj bodova je $ukupnoBodova'),
+                            content: const Text('Imate velike šanse za upis našeg smjera.'),
                             actions: [
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                child: Text('OK'),
+                                child: const Text('OK'),
                               ),
                             ],
                           ),
@@ -261,14 +263,14 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                            title: Text('Vaš procijenjeni broj bodova je ${ukupnoBodova}'),
-                            content: Text('Broj bodova koji ste ostvarili nije dovoljan za upis na naš smjer. Nastavite se truditi!'),
+                            title: Text('Vaš procijenjeni broj bodova je $ukupnoBodova'),
+                            content: const Text('Broj bodova koji ste ostvarili nije dovoljan za upis na naš smjer. Nastavite se truditi!'),
                             actions: [
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                child: Text('OK'),
+                                child: const Text('OK'),
                               ),
                             ],
                           ),
@@ -277,7 +279,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
                     }
                   }
                 },
-                child: Text('Izračunaj'),
+                child: const Text('Izračunaj'),
 
 
 
@@ -299,7 +301,7 @@ class _IzracunBodovaState extends State<IzracunBodova> {
             flex: 2,
             child: Text(labelText),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             flex: 1,
             child: TextFormField(

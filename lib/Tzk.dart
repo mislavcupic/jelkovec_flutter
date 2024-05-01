@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 class Tzk extends StatelessWidget {
 
-  final List<String> imagePaths = [
+   List<String> imagePaths = [
     'android/assets/images/bicikl.jpg',
     'android/assets/images/suma.jpg',
     'android/assets/images/suma2.jpg',
@@ -11,11 +11,13 @@ class Tzk extends StatelessWidget {
     'android/assets/images/bazen.jpg',
 
   ];
+
+   Tzk({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fakultativna TZK'),
+        title: const Text('Fakultativna TZK'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,7 +30,7 @@ class Tzk extends StatelessWidget {
               aspectRatio: 16 / 9,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 700),
+              autoPlayAnimationDuration: const Duration(milliseconds: 700),
               viewportFraction: 0.8,
             ),
             items: imagePaths.map((String imagePath) {
@@ -42,9 +44,9 @@ class Tzk extends StatelessWidget {
               );
             }).toList(),
           ),
-          Expanded(
+          const Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Tekst TZK... ',
                 style: TextStyle(fontSize: 20),

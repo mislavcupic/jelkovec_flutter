@@ -1,21 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 abstract class AbstractImageItem extends StatelessWidget {
   String src;
   String title;
   String description;
 
-  AbstractImageItem(this.src, this.title, this.description);
+  AbstractImageItem(this.src, this.title, this.description, {super.key});
 
   @override
   Widget build(BuildContext context);
 }
 
 class ImageItem extends AbstractImageItem {
-  ImageItem(String src, String title, String description)
-      : super(src, title, description);
+  ImageItem(super.src, super.title, super.description, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +23,11 @@ class ImageItem extends AbstractImageItem {
           children: [
             Text(
               title,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
             Text(
               description,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             Image.asset(
               src,
@@ -43,7 +40,7 @@ class ImageItem extends AbstractImageItem {
 }
 
 class ImageManager {
-  List<AbstractImageItem> _images = [];
+  final List<AbstractImageItem> _images = [];
 
   void addImage(AbstractImageItem image) {
     _images.add(image);

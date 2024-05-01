@@ -9,7 +9,7 @@ class ActivityCard extends StatelessWidget {
   final String text;
   final String route;
 
-  ActivityCard({
+  const ActivityCard({super.key, 
     required this.imagePath,
     required this.text,
     required this.route,
@@ -23,11 +23,11 @@ class ActivityCard extends StatelessWidget {
       },
       child: Container(
         width: 150,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black12,
               offset: Offset(0, 2),
@@ -47,11 +47,11 @@ class ActivityCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 14),
             ),
           ],
         ),
@@ -61,17 +61,17 @@ class ActivityCard extends StatelessWidget {
 }
 
 class Izvannastavne extends StatelessWidget {
-  const Izvannastavne({Key? key}) : super(key: key);
+  const Izvannastavne({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/prvapomoc': (context) => PrvaPomoc(),
-        '/robotika': (context) => Robotika(),
-        '/tzk': (context) => Tzk(),
-        '/americka': (context) => AmerickaKultura(),
+        '/prvapomoc': (context) => const PrvaPomoc(),
+        '/robotika': (context) => const Robotika(),
+        '/tzk': (context) =>  Tzk(),
+        '/americka': (context) => const AmerickaKultura(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -86,7 +86,7 @@ class Izvannastavne extends StatelessWidget {
         ),
         body: Container(
           padding: const EdgeInsets.all(8),
-          child: Wrap(
+          child: const Wrap(
             alignment: WrapAlignment.spaceAround,
             children: [
               ActivityCard(

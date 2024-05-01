@@ -7,22 +7,24 @@ import 'package:jelkovec_flutter_app/Home.dart';
 
 
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/homepage',
       routes: {
-        "/homepage": (context) => HomePage(),
-        '/home': (context) => Home(), // Define a route for the new screen
-        '/izracunbodovi': (context) => IzracunBodova(),
-        'o_skoli': (context) => SkolaInfo(),
-        'aktivnostitrziste':(context) => AktivnostiTrziste()
+        "/homepage": (context) => const HomePage(),
+        '/home': (context) => const Home(), // Define a route for the new screen
+        '/izracunbodovi': (context) => const IzracunBodova(),
+        'o_skoli': (context) => const SkolaInfo(),
+        'aktivnostitrziste':(context) =>  AktivnostiTrziste()
       },
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
