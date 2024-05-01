@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Anketa extends StatelessWidget {
+  const Anketa({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Ispunite kratku anketu'),
+          title: const Text('Ispunite kratku anketu'),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -19,7 +21,7 @@ class Anketa extends StatelessWidget {
         body: Center(
           child: ElevatedButton(
             onPressed: _launchURL,
-            child: Text(
+            child: const Text(
               'POVEZNICA NA KRATKU INFORMATIVNU ANKETU',
             ),
           ),
